@@ -1,12 +1,11 @@
-# Build folders
-build/
-out/
+# Build output
 bin/
 obj/
+build/
+out/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
-Makefile
 *.cmake
 
 # Compiled outputs
@@ -18,17 +17,15 @@ Makefile
 *.a
 *.so
 *.dylib
+*.pdb
 
 # IDE/editor
-.vscode/
+*.code-workspace
 .vs/
 *.user
 *.suo
 *.VC.db
-*.pdb
 
 # OS junk
 .DS_Store
 Thumbs.db
-
-echo *.code-workspace>> .gitignore
