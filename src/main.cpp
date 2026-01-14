@@ -11,7 +11,9 @@
 #define WINDOW_DIM_HEIGHT 384
 #define GAME_FPS 60
 #define WINDOW_TITLE "RPG Game"
-#define GAME_WORLD_MAP_PATH "nature_tileset/WorldMap.png"
+#define GAME_WORLD_MAP_PATH "assets/nature_tileset/WorldMap.png"
+#define GAME_PROPS_ROCK_PATH "assets/nature_tileset/Rock.png"
+#define GAME_PROPS_LOG_PATH "assets/nature_tileset/Log.png"
 #define GAME_WORLD_MAP_SCALE 4.0f
 
 int main()
@@ -30,8 +32,8 @@ int main()
     Character knight(windowDimensions[0], windowDimensions[1]);
 
     Prop props[2]{
-        Prop{Vector2{600.0f, 300.0f}, LoadTexture("nature_tileset/Rock.png")},
-        Prop{Vector2{400.0f, 500.0f}, LoadTexture("nature_tileset/Log.png")}
+        Prop{Vector2{600.0f, 300.0f}, LoadTexture(GAME_PROPS_ROCK_PATH)},
+        Prop{Vector2{400.0f, 500.0f}, LoadTexture(GAME_PROPS_LOG_PATH)}
     };
 
     Enemy goblin{
@@ -42,8 +44,8 @@ int main()
     
     Enemy slime{
         Vector2{500.0f, 700.0f},
-        LoadTexture("characters/slime_idle_spritesheet.png"),
-        LoadTexture("characters/slime_run_spritesheet.png")
+        LoadTexture(ENEMY_SLIME_IDLE_PATH),
+        LoadTexture(ENEMY_SLIME_RUN_PATH)
     };
 
     Enemy* enemies[]

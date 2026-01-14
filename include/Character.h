@@ -4,9 +4,7 @@
 #include "raylib.h"
 #include "BaseCharacter.h"
 
-#define KNIGHT_CHARACTER_PATH "characters/knight_idle_spritesheet.png"
-#define KNIGHT_CHARACTER_IDLE_PATH "characters/knight_idle_spritesheet.png"
-#define KNIGHT_CHARACTER_RUN_PATH "characters/knight_run_spritesheet.png"
+#define KNIGHT_WEAPON_SWORD_PATH "assets/characters/weapon_sword.png"
 
 class Character : public BaseCharacter
 {
@@ -21,7 +19,7 @@ class Character : public BaseCharacter
     private:
         int windowWidth{};
         int windowHeight{};
-        Texture2D weapon{LoadTexture("characters/weapon_sword.png")};
+        Texture2D weapon{LoadTexture(KNIGHT_WEAPON_SWORD_PATH)};
         Rectangle weaponCollisionRec{};
         float health{100.0f};
 };

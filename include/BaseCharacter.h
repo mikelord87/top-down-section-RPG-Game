@@ -3,9 +3,9 @@
 
 #include "raylib.h"
 
-#define KNIGHT_CHARACTER_PATH "characters/knight_idle_spritesheet.png"
-#define KNIGHT_CHARACTER_IDLE_PATH "characters/knight_idle_spritesheet.png"
-#define KNIGHT_CHARACTER_RUN_PATH "characters/knight_run_spritesheet.png"
+#define KNIGHT_CHARACTER_PATH "assets/characters/knight_idle_spritesheet.png"
+#define KNIGHT_CHARACTER_IDLE_PATH "assets/characters/knight_idle_spritesheet.png"
+#define KNIGHT_CHARACTER_RUN_PATH "assets/characters/knight_run_spritesheet.png"
 
 class BaseCharacter
 {

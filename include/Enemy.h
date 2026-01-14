@@ -2,9 +2,10 @@
 #include "BaseCharacter.h"
 #include "Character.h"
 
-#define ENEMY_CHARACTER_PATH "characters/goblin_idle_spritesheet.png"
-#define ENEMY_CHARACTER_IDLE_PATH "characters/goblin_idle_spritesheet.png"
-#define ENEMY_CHARACTER_RUN_PATH "characters/goblin_run_spritesheet.png"
+#define ENEMY_CHARACTER_IDLE_PATH "assets/characters/goblin_idle_spritesheet.png"
+#define ENEMY_CHARACTER_RUN_PATH "assets/characters/goblin_run_spritesheet.png"
+#define ENEMY_SLIME_RUN_PATH "assets/characters/slime_run_spritesheet.png"
+#define ENEMY_SLIME_IDLE_PATH "assets/characters/slime_idle_spritesheet.png"
 
 class Enemy : public BaseCharacter
 {
