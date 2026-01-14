@@ -30,3 +30,5 @@ Makefile
 # OS junk
 .DS_Store
 Thumbs.db
+
+echo *.code-workspace>> .gitignore
