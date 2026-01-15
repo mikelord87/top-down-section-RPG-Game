@@ -1,9 +1,0 @@
-<map id="src/BaseCharacter.cpp" name="src/BaseCharacter.cpp">
-<area shape="rect" id="Node000001" title="Implements BaseCharacter behavior such as animation, movement, and drawing." alt="" coords="49,5,204,32"/>
-<area shape="rect" id="Node000002" href="$_base_character_8h.html" title="Declares the BaseCharacter abstract class used by all animated game actors." alt="" coords="5,80,125,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,35,87,70,83,67,117,30"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="149,80,229,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,30,171,68,166,68,137,35"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="33,155,97,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="67,105,68,140,62,138,63,109"/>
-</map>
