@@ -1,0 +1,42 @@
+\doxysection{Enemy.\+h}
+\hypertarget{_enemy_8h_source}{}\label{_enemy_8h_source}\index{include/Enemy.h@{include/Enemy.h}}
+\mbox{\hyperlink{_enemy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ ENEMY\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ ENEMY\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_base_character_8h}{BaseCharacter.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_character_8h}{Character.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ ENEMY\_CHARACTER\_IDLE\_PATH\ "{}assets/characters/goblin\_idle\_spritesheet.png"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ ENEMY\_CHARACTER\_RUN\_PATH\ "{}assets/characters/goblin\_run\_spritesheet.png"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ ENEMY\_SLIME\_RUN\_PATH\ "{}assets/characters/slime\_run\_spritesheet.png"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ ENEMY\_SLIME\_IDLE\_PATH\ "{}assets/characters/slime\_idle\_spritesheet.png"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_enemy_a4434ebe80fc2644048e3d4caebfad5e3}{Enemy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_character_abef0574252243a3ef9758005168748d4}{BaseCharacter}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_enemy_a4434ebe80fc2644048e3d4caebfad5e3}{Enemy}}(Vector2\ pos,\ Texture2D\ idle\_texture,\ Texture2D\ run\_texture);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_enemy_af1c9afe97e4d05942f02e5d102bf330a}{tick}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_enemy_ab18d865413d813d6f9b872d48ecd8e85}{setTarget}}(\mbox{\hyperlink{class_character}{Character}}*\ character);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ Vector2\ \mbox{\hyperlink{class_enemy_ad5368a66c2dfaa8f8f422cf61cb384af}{getScreenPos}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character}{Character}}*\ target;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ damagePerSec\{10.f\};\ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius\{25.0f\};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENEMY\_H}}
+
+\end{DoxyCode}

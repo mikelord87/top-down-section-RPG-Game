@@ -1,0 +1,7 @@
+<map id="Character::getScreenPos" name="Character::getScreenPos">
+<area shape="rect" id="Node000001" title="Get the knight screen position (keeps player centered)." alt="" coords="258,5,426,32"/>
+<area shape="rect" id="Node000002" href="$class_character.html#a8ddce69ed934d5bedcee43f832b1588f" title="Per&#45;frame update for the player character." alt="" coords="103,5,210,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,19,211,21,210,16,245,19"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Program entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>

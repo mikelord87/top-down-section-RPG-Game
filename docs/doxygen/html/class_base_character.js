@@ -1,0 +1,26 @@
+var class_base_character =
+[
+    [ "BaseCharacter", "class_base_character.html#abef0574252243a3ef9758005168748d4", null ],
+    [ "getAlive", "class_base_character.html#a71f1a537e87948000fa31765983d1347", null ],
+    [ "getCollisionRec", "class_base_character.html#aa11fa0276349d0a903f56ea90bb89cc4", null ],
+    [ "getScreenPos", "class_base_character.html#a04c288503bc53c26a867e965ec9cc1ca", null ],
+    [ "getWorldPos", "class_base_character.html#acd8c96cb3f1b7a03bc08daa945ed8525", null ],
+    [ "setAlive", "class_base_character.html#a7341a6276e20081b56480e0a0da66a50", null ],
+    [ "tick", "class_base_character.html#aa87bfaefda12ba0b55c9894826ddaba9", null ],
+    [ "undoMovement", "class_base_character.html#aa0fccec13bef9fce83e153bf12cb728c", null ],
+    [ "frame", "class_base_character.html#ac67d945368e5e0bbd8e298c52ad64bcd", null ],
+    [ "height", "class_base_character.html#a5fc621284c0ff6f6a294d111e7899984", null ],
+    [ "idle", "class_base_character.html#a3e17bab8dbfafead36c20fcccf11dbea", null ],
+    [ "maxFrames", "class_base_character.html#a14ba1f018b66ed992a31b7853e5e4d4d", null ],
+    [ "rightLeft", "class_base_character.html#a6cbac95abad331db1d570de52ea1ce80", null ],
+    [ "run", "class_base_character.html#a36e7144024873ba4fc6a5fa63da2ced4", null ],
+    [ "runningTime", "class_base_character.html#a0011c0cc39572e3b118b0397397562a6", null ],
+    [ "scale", "class_base_character.html#ad3fbc1a0c942e5ddbbec5eb70bfe04d2", null ],
+    [ "speed", "class_base_character.html#af95b5b7aac0b65d6d99f1fdaafd4683a", null ],
+    [ "texture", "class_base_character.html#a1748d9bce3b000adeb924ff89179bf19", null ],
+    [ "updateTime", "class_base_character.html#ab941f1a23e41d7c1bd5fb4fe8e5a2a93", null ],
+    [ "velocity", "class_base_character.html#a118d02424a473c35bc9bde4c93767348", null ],
+    [ "width", "class_base_character.html#afe944044b547a8bffae9003a4ec56942", null ],
+    [ "worldPos", "class_base_character.html#ac1499539ba64e44c7280fbe3583e3ebb", null ],
+    [ "worldPosLastFrame", "class_base_character.html#a9a12e7c0ec8c2523338399041efaad98", null ]
+];

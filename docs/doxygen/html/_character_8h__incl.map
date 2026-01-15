@@ -1,0 +1,8 @@
+<map id="include/Character.h" name="include/Character.h">
+<area shape="rect" id="Node000001" title="Declares the player&#45;controlled Character." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="41,155,104,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,30,52,80,53,111,62,141,57,141,48,112,47,80,65,35"/>
+<area shape="rect" id="Node000003" href="$_base_character_8h.html" title="Declares the BaseCharacter abstract class used by all animated game actors." alt="" coords="62,80,182,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,30,107,67,102,67,81,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="116,106,92,144,88,140,111,109"/>
+</map>

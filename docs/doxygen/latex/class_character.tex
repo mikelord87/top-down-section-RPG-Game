@@ -1,0 +1,252 @@
+\doxysection{Character Class Reference}
+\hypertarget{class_character}{}\label{class_character}\index{Character@{Character}}
+
+
+Player-\/controlled character (knight).  
+
+
+
+
+{\ttfamily \#include $<$Character.\+h$>$}
+
+
+
+Inheritance diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_aa8e33f1a77a743537dc702122a8769ae}{Character}} (int win\+Width, int win\+Height)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_character}{Character} centered in the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_character_a8ddce69ed934d5bedcee43f832b1588f}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Per-\/frame update for the player character. \end{DoxyCompactList}\item 
+virtual Vector2 \mbox{\hyperlink{class_character_a7c6745ff41d3d785e552e86cd8a1db30}{get\+Screen\+Pos}} (void) override
+\begin{DoxyCompactList}\small\item\em Get the knight screen position (keeps player centered). \end{DoxyCompactList}\item 
+Rectangle \mbox{\hyperlink{class_character_ad40af89fe4bfc76e04d7919debdfeb88}{get\+Weapon\+Collision\+Rec}} ()
+\begin{DoxyCompactList}\small\item\em Get the sword collision rectangle in screen space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_character_a95956c07e76d58a0122d454fb372a990}{get\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Get current health (0..CHARACTER\+\_\+\+PLAYER\+\_\+\+HEALTH). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_afc49015f7f6939e39f1718686e191e3e}{take\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Apply damage to the character health. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_character}{Base\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_character_abef0574252243a3ef9758005168748d4}{Base\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_base_character}{Base\+Character} (loads default textures). \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_base_character_acd8c96cb3f1b7a03bc08daa945ed8525}{get\+World\+Pos}} (void)
+\begin{DoxyCompactList}\small\item\em Get the character world position (top-\/left reference). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_character_aa0fccec13bef9fce83e153bf12cb728c}{undo\+Movement}} (void)
+\begin{DoxyCompactList}\small\item\em Revert movement by restoring the previous frame\textquotesingle{}s world position. \end{DoxyCompactList}\item 
+Rectangle \mbox{\hyperlink{class_base_character_aa11fa0276349d0a903f56ea90bb89cc4}{get\+Collision\+Rec}} (void)
+\begin{DoxyCompactList}\small\item\em Get the character collision rectangle in screen space. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_character_a71f1a537e87948000fa31765983d1347}{get\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Get the alive state for this character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_character_a7341a6276e20081b56480e0a0da66a50}{set\+Alive}} (bool is\+Alive)
+\begin{DoxyCompactList}\small\item\em Set the alive state for this character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_base_character}{Base\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+Texture2D \mbox{\hyperlink{class_base_character_a1748d9bce3b000adeb924ff89179bf19}{texture}} \{Load\+Texture(\mbox{\hyperlink{_base_character_8h_a1c45bf8c4d1de800b6eb1ce9cf0e73a6}{KNIGHT\+\_\+\+CHARACTER\+\_\+\+PATH}})\}
+\begin{DoxyCompactList}\small\item\em Current texture used for drawing. \end{DoxyCompactList}\item 
+Texture2D \mbox{\hyperlink{class_base_character_a3e17bab8dbfafead36c20fcccf11dbea}{idle}} \{Load\+Texture(\mbox{\hyperlink{_base_character_8h_a1c45bf8c4d1de800b6eb1ce9cf0e73a6}{KNIGHT\+\_\+\+CHARACTER\+\_\+\+PATH}})\}
+\begin{DoxyCompactList}\small\item\em Idle animation spritesheet. \end{DoxyCompactList}\item 
+Texture2D \mbox{\hyperlink{class_base_character_a36e7144024873ba4fc6a5fa63da2ced4}{run}} \{Load\+Texture(\mbox{\hyperlink{_base_character_8h_aea3b5c999ff14454ebc4dc505b658418}{KNIGHT\+\_\+\+CHARACTER\+\_\+\+RUN\+\_\+\+PATH}})\}
+\begin{DoxyCompactList}\small\item\em Run animation spritesheet. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_base_character_ac1499539ba64e44c7280fbe3583e3ebb}{world\+Pos}} \{\}
+\begin{DoxyCompactList}\small\item\em Position in world coordinates. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_base_character_a9a12e7c0ec8c2523338399041efaad98}{world\+Pos\+Last\+Frame}} \{\}
+\begin{DoxyCompactList}\small\item\em World position in previous frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_a6cbac95abad331db1d570de52ea1ce80}{right\+Left}} \{1.\+0f\}
+\begin{DoxyCompactList}\small\item\em Facing direction\+: 1 = right, -\/1 = left. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_a0011c0cc39572e3b118b0397397562a6}{running\+Time}} \{\}
+\begin{DoxyCompactList}\small\item\em Accumulated time for frame switching. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_base_character_ac67d945368e5e0bbd8e298c52ad64bcd}{frame}} \{\}
+\begin{DoxyCompactList}\small\item\em Current animation frame index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_base_character_a14ba1f018b66ed992a31b7853e5e4d4d}{max\+Frames}} \{6\}
+\begin{DoxyCompactList}\small\item\em Maximum frame index (inclusive) used by spritesheets. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_ab941f1a23e41d7c1bd5fb4fe8e5a2a93}{update\+Time}} \{1.\+0f / 12.\+0f\}
+\begin{DoxyCompactList}\small\item\em Seconds per frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_af95b5b7aac0b65d6d99f1fdaafd4683a}{speed}} \{4.\+0f\}
+\begin{DoxyCompactList}\small\item\em Movement speed scalar. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_afe944044b547a8bffae9003a4ec56942}{width}} \{\}
+\begin{DoxyCompactList}\small\item\em Width of one animation frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_a5fc621284c0ff6f6a294d111e7899984}{height}} \{\}
+\begin{DoxyCompactList}\small\item\em Height of one animation frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_character_ad3fbc1a0c942e5ddbbec5eb70bfe04d2}{scale}} \{4.\+0f\}
+\begin{DoxyCompactList}\small\item\em Draw scale factor. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_base_character_a118d02424a473c35bc9bde4c93767348}{velocity}} \{\}
+\begin{DoxyCompactList}\small\item\em Desired movement direction this frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Player-\/controlled character (knight). 
+
+Reads keyboard input (WASD) to set movement velocity, draws an equipped sword, and tracks health/alive state. 
+
+\label{doc-constructors}
+\Hypertarget{class_character_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_character_aa8e33f1a77a743537dc702122a8769ae}\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily \label{class_character_aa8e33f1a77a743537dc702122a8769ae} 
+Character\+::\+Character (\begin{DoxyParamCaption}\item[{int}]{win\+Width}{, }\item[{int}]{win\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Construct a \doxylink{class_character}{Character} centered in the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win\+Width} & Window width in pixels. \\
+\hline
+{\em win\+Height} & Window height in pixels. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_character_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_character_a95956c07e76d58a0122d454fb372a990}\index{Character@{Character}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_character_a95956c07e76d58a0122d454fb372a990} 
+float Character\+::get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get current health (0..CHARACTER\+\_\+\+PLAYER\+\_\+\+HEALTH). 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_character_a95956c07e76d58a0122d454fb372a990_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_a7c6745ff41d3d785e552e86cd8a1db30}\index{Character@{Character}!getScreenPos@{getScreenPos}}
+\index{getScreenPos@{getScreenPos}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getScreenPos()}{getScreenPos()}}
+{\footnotesize\ttfamily \label{class_character_a7c6745ff41d3d785e552e86cd8a1db30} 
+Vector2 Character\+::get\+Screen\+Pos (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the knight screen position (keeps player centered). 
+
+Keep the player centered in the window.
+
+\begin{DoxyReturn}{Returns}
+Screen position of the knight.
+\end{DoxyReturn}
+This returns a screen position such that the character\textquotesingle{}s sprite is drawn around the center of the window (accounting for scaling). 
+
+Implements \mbox{\hyperlink{class_base_character_a04c288503bc53c26a867e965ec9cc1ca}{Base\+Character}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a7c6745ff41d3d785e552e86cd8a1db30_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_ad40af89fe4bfc76e04d7919debdfeb88}\index{Character@{Character}!getWeaponCollisionRec@{getWeaponCollisionRec}}
+\index{getWeaponCollisionRec@{getWeaponCollisionRec}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getWeaponCollisionRec()}{getWeaponCollisionRec()}}
+{\footnotesize\ttfamily \label{class_character_ad40af89fe4bfc76e04d7919debdfeb88} 
+Rectangle Character\+::get\+Weapon\+Collision\+Rec (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sword collision rectangle in screen space. 
+
+\begin{DoxyReturn}{Returns}
+Screen-\/space collision rectangle for melee hit detection. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_character_ad40af89fe4bfc76e04d7919debdfeb88_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_afc49015f7f6939e39f1718686e191e3e}\index{Character@{Character}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_character_afc49015f7f6939e39f1718686e191e3e} 
+void Character\+::take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage}{}\end{DoxyParamCaption})}
+
+
+
+Apply damage to the character health. 
+
+Reduce health and update alive state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage amount to subtract from health. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_character_a8ddce69ed934d5bedcee43f832b1588f}\index{Character@{Character}!tick@{tick}}
+\index{tick@{tick}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \label{class_character_a8ddce69ed934d5bedcee43f832b1588f} 
+void Character\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Per-\/frame update for the player character. 
+
+Handle input, update movement/animation, and draw the player and weapon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Frame delta time in seconds.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Uses WASD keys to set velocity.
+\item Calls \doxylink{class_base_character_aa87bfaefda12ba0b55c9894826ddaba9}{Base\+Character\+::tick()} to animate/move/draw the character.
+\item Draws the sword on the appropriate side based on facing direction.
+\item Builds weapon\+Collision\+Rec for hit detection.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Frame delta time in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_base_character_aa87bfaefda12ba0b55c9894826ddaba9}{Base\+Character}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_character_a8ddce69ed934d5bedcee43f832b1588f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_character_8h}{Character.\+h}}\item 
+src/\mbox{\hyperlink{_character_8cpp}{Character.\+cpp}}\end{DoxyCompactItemize}

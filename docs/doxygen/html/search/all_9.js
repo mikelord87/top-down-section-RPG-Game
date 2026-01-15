@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['game_0',['Top-down section RPG Game',['../index.html',1,'']]],
+  ['game_20concept_1',['Game Concept',['../md_docs_2_design.html#autotoc_md105',1,'']]],
+  ['game_5ffps_2',['GAME_FPS',['../main_8cpp.html#a63a780eb9590cbea188494a74c8eb79e',1,'main.cpp']]],
+  ['game_5fprops_5flog_5fpath_3',['GAME_PROPS_LOG_PATH',['../main_8cpp.html#a63e24d8a47852ecf7fd08bc29b5ed862',1,'main.cpp']]],
+  ['game_5fprops_5frock_5fpath_4',['GAME_PROPS_ROCK_PATH',['../main_8cpp.html#a95216ef5f97c8711f5aa1953d96f76b4',1,'main.cpp']]],
+  ['game_5fworld_5fmap_5fpath_5',['GAME_WORLD_MAP_PATH',['../main_8cpp.html#a5c548c8eda3c4348052f0cd0312734af',1,'main.cpp']]],
+  ['game_5fworld_5fmap_5fscale_6',['GAME_WORLD_MAP_SCALE',['../main_8cpp.html#a3cb19f1944d7c62c70138811e5c902ed',1,'main.cpp']]],
+  ['gameplay_20data_20examples_7',['Key gameplay data (examples)',['../index.html#autotoc_md5',1,'']]],
+  ['gameplay_20notes_8',['Gameplay Notes',['../md_docs_2_gameplay.html',1,'']]],
+  ['gameplay_20prototype_9',['Current Gameplay (Prototype)',['../md_docs_2_gameplay.html#autotoc_md135',1,'']]],
+  ['gameplay_2emd_10',['Gameplay.md',['../_gameplay_8md.html',1,'']]],
+  ['generate_11',['Generate',['../md_docs_2_build.html#autotoc_md62',1,'']]],
+  ['generate_20docs_12',['Generate docs',['../index.html#autotoc_md18',1,'']]],
+  ['generate_20documentation_20doxygen_13',['Generate Documentation (Doxygen)',['../index.html#autotoc_md16',1,'']]],
+  ['generate_20doxygen_20documentation_14',['Generate Doxygen Documentation',['../md_docs_2_build.html#autotoc_md60',1,'']]],
+  ['getalive_15',['getAlive',['../class_base_character.html#a71f1a537e87948000fa31765983d1347',1,'BaseCharacter']]],
+  ['getcollisionrec_16',['getCollisionRec',['../class_base_character.html#aa11fa0276349d0a903f56ea90bb89cc4',1,'BaseCharacter::getCollisionRec()'],['../class_prop.html#af63a671b3f127d4dab7c281c7ab1c252',1,'Prop::getCollisionRec()']]],
+  ['gethealth_17',['getHealth',['../class_character.html#a95956c07e76d58a0122d454fb372a990',1,'Character']]],
+  ['getscreenpos_18',['getScreenPos',['../class_base_character.html#a04c288503bc53c26a867e965ec9cc1ca',1,'BaseCharacter::getScreenPos()'],['../class_character.html#a7c6745ff41d3d785e552e86cd8a1db30',1,'Character::getScreenPos()'],['../class_enemy.html#ad5368a66c2dfaa8f8f422cf61cb384af',1,'Enemy::getScreenPos()']]],
+  ['getweaponcollisionrec_19',['getWeaponCollisionRec',['../class_character.html#ad40af89fe4bfc76e04d7919debdfeb88',1,'Character']]],
+  ['getworldpos_20',['getWorldPos',['../class_base_character.html#acd8c96cb3f1b7a03bc08daa945ed8525',1,'BaseCharacter']]],
+  ['goals_21',['Goals',['../md_docs_2_design.html#autotoc_md110',1,'Goals'],['../md_docs_2_design.html#autotoc_md115',1,'Goals']]],
+  ['guide_22',['Guide',['../md_docs_2_assets.html',1,'Assets Guide'],['../md_docs_2_contributing.html',1,'Contributing Guide']]],
+  ['guidelines_23',['Guidelines',['../md_docs_2_contributing.html#autotoc_md83',1,'Coding Guidelines'],['../md_docs_2_contributing.html#autotoc_md85',1,'Documentation Guidelines']]]
+];

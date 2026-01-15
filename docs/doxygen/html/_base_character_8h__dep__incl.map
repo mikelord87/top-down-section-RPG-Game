@@ -1,0 +1,17 @@
+<map id="include/BaseCharacter.h" name="include/BaseCharacter.h">
+<area shape="rect" id="Node000001" title="Declares the BaseCharacter abstract class used by all animated game actors." alt="" coords="107,5,271,32"/>
+<area shape="rect" id="Node000002" href="$_character_8h.html" title="Declares the player&#45;controlled Character." alt="" coords="122,80,256,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,45,191,80,186,79,188,50"/>
+<area shape="rect" id="Node000003" href="$_enemy_8h.html" title="Declares the Enemy character type (AI&#45;controlled)." alt="" coords="30,155,148,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="150,43,131,60,112,81,103,100,97,120,92,155,87,154,92,119,98,98,108,79,128,56,154,38"/>
+<area shape="rect" id="Node000007" href="$_base_character_8cpp.html" title="Implements BaseCharacter behavior such as animation, movement, and drawing." alt="" coords="280,80,436,107"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="232,36,331,78,326,80,232,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,118,108,156,105,152,161,114"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Entry point for the top&#45;down RPG demo." alt="" coords="138,229,234,256"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="191,121,189,230,184,228,186,124"/>
+<area shape="rect" id="Node000006" href="$_character_8cpp.html" title="Implements the player&#45;controlled Character logic." alt="" coords="224,155,349,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="218,113,272,154,267,155,217,119"/>
+<area shape="rect" id="Node000004" href="$_enemy_8cpp.html" title="Implements Enemy AI behavior (chase and collision damage)." alt="" coords="5,229,114,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="80,195,67,230,62,228,76,197"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="119,188,172,228,167,229,117,193"/>
+</map>

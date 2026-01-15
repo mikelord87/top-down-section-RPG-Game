@@ -1,0 +1,12 @@
+<map id="include/Character.h" name="include/Character.h">
+<area shape="rect" id="Node000001" title="Declares the player&#45;controlled Character." alt="" coords="119,5,253,32"/>
+<area shape="rect" id="Node000002" href="$_enemy_8h.html" title="Declares the Enemy character type (AI&#45;controlled)." alt="" coords="32,80,149,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,43,108,82,105,78,160,40"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Entry point for the top&#45;down RPG demo." alt="" coords="138,155,234,181"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="188,46,189,155,184,153,184,49"/>
+<area shape="rect" id="Node000005" href="$_character_8cpp.html" title="Implements the player&#45;controlled Character logic." alt="" coords="224,80,349,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="216,39,271,79,266,80,215,44"/>
+<area shape="rect" id="Node000003" href="$_enemy_8cpp.html" title="Implements Enemy AI behavior (chase and collision damage)." alt="" coords="5,155,114,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,120,67,156,63,153,76,123"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="120,114,172,154,167,155,118,119"/>
+</map>

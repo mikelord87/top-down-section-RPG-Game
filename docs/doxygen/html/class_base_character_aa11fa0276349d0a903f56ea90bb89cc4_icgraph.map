@@ -1,0 +1,7 @@
+<map id="BaseCharacter::getCollisionRec" name="BaseCharacter::getCollisionRec">
+<area shape="rect" id="Node000001" title="Get the character collision rectangle in screen space." alt="" coords="145,31,353,57"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Program entry point." alt="" coords="26,5,76,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,30,76,24,76,19,132,27"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#af1c9afe97e4d05942f02e5d102bf330a" title="Per&#45;frame update: chase the target and apply damage on collision." alt="" coords="5,56,97,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,60,97,66,96,61,132,59"/>
+</map>

@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @brief Entry point for the top-down RPG demo.
+ *
+ * Sets up the raylib window, loads assets, creates game objects, and runs the main loop.
+ * 
+ * @author Miguel Rios
+ * @date 01/14/2026
+ */
 
 #include "raylib.h"
 #include "raymath.h"
@@ -6,16 +15,68 @@
 #include "Enemy.h"
 #include <string>
 
+/** 
+ * @def WINDOW_DIM_SIZE
+ * @brief Number of window dimension entries (width, height). 
+ */
 #define WINDOW_DIM_SIZE 2
+
+/** 
+ * @def WINDOW_DIM_WIDTH
+ * @brief Window width in pixels.
+ */
 #define WINDOW_DIM_WIDTH 384
+
+/** 
+ * @def WINDOW_DIM_HEIGHT
+ * @brief Window height in pixels.
+ */
 #define WINDOW_DIM_HEIGHT 384
-#define GAME_FPS 60
+
+/** 
+ * @def GAME_FPS
+ * @brief Target frame rate.
+ */
+#define GAME_FPS 60   
+
+/** 
+ * @def WINDOW_TITLE
+ * @brief Window title.
+ */
 #define WINDOW_TITLE "RPG Game"
+
+/** 
+ * @def GAME_WORLD_MAP_PATH
+ * @brief World map texture path.
+ */
 #define GAME_WORLD_MAP_PATH "assets/nature_tileset/WorldMap.png"
+
+/** 
+ * @def GAME_PROPS_ROCK_PATH
+ * @brief Rock prop texture path.
+ */
 #define GAME_PROPS_ROCK_PATH "assets/nature_tileset/Rock.png"
+
+/** 
+ * @def GAME_PROPS_LOG_PATH
+ * @brief Log prop texture path.
+ */      
 #define GAME_PROPS_LOG_PATH "assets/nature_tileset/Log.png"
+
+/** 
+ * @def GAME_WORLD_MAP_SCALE
+ * @brief World map draw scale.
+ */
 #define GAME_WORLD_MAP_SCALE 4.0f
 
+/**
+ * @brief Program entry point.
+ *
+ * Creates the window and game entities (player, props, enemies), then runs an update/render loop
+ * until the window is closed.
+ *
+ * @return Exit code (0 on normal completion).
+ */
 int main()
 {
     // Window dimension
@@ -24,7 +85,7 @@ int main()
     // Initialize the window
     InitWindow(windowDimensions[0], windowDimensions[1], WINDOW_TITLE);
 
-    // Load World Map tesxture
+    // Load World Map texture
     Texture2D worldMap = LoadTexture(GAME_WORLD_MAP_PATH);
     Vector2 wmPos{0.0f, 0.0f};
     const float mapScale(4.0f);
@@ -91,6 +152,7 @@ int main()
 
         // Game logic
         knight.tick(GetFrameTime());
+
         // Check map bounds
         if(knight.getWorldPos().x < 0.0f ||
            knight.getWorldPos().y < 0.0f ||
@@ -109,11 +171,13 @@ int main()
             }
         }
 
+        // Update enemies
         for(auto enemy : enemies)
         {
             enemy->tick(GetFrameTime());
         }
 
+        // Player attack (mouse click)
         if(IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
         {
             for(auto enemy : enemies)

@@ -1,3 +1,11 @@
+/**
+ * @file Character.cpp
+ * @brief Implements the player-controlled Character logic.
+ * 
+ * @author Miguel Rios
+ * @date 01/14/2026
+ */
+
 #include "Character.h"
 #include "raymath.h"
 
@@ -5,10 +13,17 @@ Character::Character(int winWidth, int winHeight) :
         windowWidth(winWidth),
         windowHeight(winHeight)
 {
+    // Frame size is derived from the spritesheet width.
     width = texture.width / maxFrames;
     height = texture.height;
 }
 
+/**
+ * @brief Keep the player centered in the window.
+ *
+ * This returns a screen position such that the character's sprite is drawn around
+ * the center of the window (accounting for scaling).
+ */
 Vector2 Character::getScreenPos(void)
 {
     return Vector2{
@@ -17,6 +32,16 @@ Vector2 Character::getScreenPos(void)
     };
 }
 
+/**
+ * @brief Handle input, update movement/animation, and draw the player and weapon.
+ *
+ * - Uses WASD keys to set velocity.
+ * - Calls BaseCharacter::tick() to animate/move/draw the character.
+ * - Draws the sword on the appropriate side based on facing direction.
+ * - Builds weaponCollisionRec for hit detection.
+ *
+ * @param deltaTime Frame delta time in seconds.
+ */
 void Character::tick(float deltaTime)
 {
     if(!getAlive()) return;
@@ -66,9 +91,14 @@ void Character::tick(float deltaTime)
     Rectangle dest{getScreenPos().x + offset.x, getScreenPos().y + offset.y, weapon.width * scale, weapon.height * scale};
     DrawTexturePro(weapon, source, dest, origin, rotation, WHITE);
 
+    // Debug draw:
     // DrawRectangleLines(weaponCollisionRec.x, weaponCollisionRec.y, weaponCollisionRec.width, weaponCollisionRec.height, RED);
 }
 
+/**
+ * @brief Reduce health and update alive state.
+ * @param damage Damage amount to subtract from health.
+ */
 void Character::takeDamage(float damage)
 {
     health -= damage;

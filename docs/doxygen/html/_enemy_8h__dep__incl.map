@@ -1,0 +1,7 @@
+<map id="include/Enemy.h" name="include/Enemy.h">
+<area shape="rect" id="Node000001" title="Declares the Enemy character type (AI&#45;controlled)." alt="" coords="64,5,181,32"/>
+<area shape="rect" id="Node000002" href="$_enemy_8cpp.html" title="Implements Enemy AI behavior (chase and collision damage)." alt="" coords="5,80,114,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,43,72,82,68,78,99,45"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the top&#45;down RPG demo." alt="" coords="138,80,234,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,42,178,80,172,79,142,46"/>
+</map>

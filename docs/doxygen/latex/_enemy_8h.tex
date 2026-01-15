@@ -1,0 +1,96 @@
+\doxysection{include/\+Enemy.h File Reference}
+\hypertarget{_enemy_8h}{}\label{_enemy_8h}\index{include/Enemy.h@{include/Enemy.h}}
+
+
+Declares the \doxylink{class_enemy}{Enemy} character type (AI-\/controlled).  
+
+
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}Base\+Character.\+h"{}}\newline
+{\ttfamily \#include "{}Character.\+h"{}}\newline
+Include dependency graph for Enemy.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{_enemy_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{_enemy_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_enemy}{Enemy}}
+\begin{DoxyCompactList}\small\item\em AI-\/controlled enemy that chases and damages the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_enemy_8h_a4e094de820ae66db39754dd443113662}{ENEMY\+\_\+\+CHARACTER\+\_\+\+IDLE\+\_\+\+PATH}}~"{}assets/characters/goblin\+\_\+idle\+\_\+spritesheet.\+png"{}
+\begin{DoxyCompactList}\small\item\em Texture path for goblin idle animation spritesheet. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_enemy_8h_a8903b4833c4489896d2f2501d8c23040}{ENEMY\+\_\+\+CHARACTER\+\_\+\+RUN\+\_\+\+PATH}}~"{}assets/characters/goblin\+\_\+run\+\_\+spritesheet.\+png"{}
+\begin{DoxyCompactList}\small\item\em Texture path for goblin run animation spritesheet. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_enemy_8h_ac1657502b6d3c8f3996e05451b44b5ae}{ENEMY\+\_\+\+SLIME\+\_\+\+RUN\+\_\+\+PATH}}~"{}assets/characters/slime\+\_\+run\+\_\+spritesheet.\+png"{}
+\begin{DoxyCompactList}\small\item\em Texture path for slime run animation spritesheet. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_enemy_8h_a5feaf8412427eb6689cca89e4c8a535f}{ENEMY\+\_\+\+SLIME\+\_\+\+IDLE\+\_\+\+PATH}}~"{}assets/characters/slime\+\_\+idle\+\_\+spritesheet.\+png"{}
+\begin{DoxyCompactList}\small\item\em Texture path for slime idle animation spritesheet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares the \doxylink{class_enemy}{Enemy} character type (AI-\/controlled). 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rios 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/14/2026 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\Hypertarget{_enemy_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_enemy_8h_a4e094de820ae66db39754dd443113662}\index{Enemy.h@{Enemy.h}!ENEMY\_CHARACTER\_IDLE\_PATH@{ENEMY\_CHARACTER\_IDLE\_PATH}}
+\index{ENEMY\_CHARACTER\_IDLE\_PATH@{ENEMY\_CHARACTER\_IDLE\_PATH}!Enemy.h@{Enemy.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY\_CHARACTER\_IDLE\_PATH}{ENEMY\_CHARACTER\_IDLE\_PATH}}
+{\footnotesize\ttfamily \label{_enemy_8h_a4e094de820ae66db39754dd443113662} 
+\#define ENEMY\+\_\+\+CHARACTER\+\_\+\+IDLE\+\_\+\+PATH~"{}assets/characters/goblin\+\_\+idle\+\_\+spritesheet.\+png"{}}
+
+
+
+Texture path for goblin idle animation spritesheet. 
+
+\Hypertarget{_enemy_8h_a8903b4833c4489896d2f2501d8c23040}\index{Enemy.h@{Enemy.h}!ENEMY\_CHARACTER\_RUN\_PATH@{ENEMY\_CHARACTER\_RUN\_PATH}}
+\index{ENEMY\_CHARACTER\_RUN\_PATH@{ENEMY\_CHARACTER\_RUN\_PATH}!Enemy.h@{Enemy.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY\_CHARACTER\_RUN\_PATH}{ENEMY\_CHARACTER\_RUN\_PATH}}
+{\footnotesize\ttfamily \label{_enemy_8h_a8903b4833c4489896d2f2501d8c23040} 
+\#define ENEMY\+\_\+\+CHARACTER\+\_\+\+RUN\+\_\+\+PATH~"{}assets/characters/goblin\+\_\+run\+\_\+spritesheet.\+png"{}}
+
+
+
+Texture path for goblin run animation spritesheet. 
+
+\Hypertarget{_enemy_8h_a5feaf8412427eb6689cca89e4c8a535f}\index{Enemy.h@{Enemy.h}!ENEMY\_SLIME\_IDLE\_PATH@{ENEMY\_SLIME\_IDLE\_PATH}}
+\index{ENEMY\_SLIME\_IDLE\_PATH@{ENEMY\_SLIME\_IDLE\_PATH}!Enemy.h@{Enemy.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY\_SLIME\_IDLE\_PATH}{ENEMY\_SLIME\_IDLE\_PATH}}
+{\footnotesize\ttfamily \label{_enemy_8h_a5feaf8412427eb6689cca89e4c8a535f} 
+\#define ENEMY\+\_\+\+SLIME\+\_\+\+IDLE\+\_\+\+PATH~"{}assets/characters/slime\+\_\+idle\+\_\+spritesheet.\+png"{}}
+
+
+
+Texture path for slime idle animation spritesheet. 
+
+\Hypertarget{_enemy_8h_ac1657502b6d3c8f3996e05451b44b5ae}\index{Enemy.h@{Enemy.h}!ENEMY\_SLIME\_RUN\_PATH@{ENEMY\_SLIME\_RUN\_PATH}}
+\index{ENEMY\_SLIME\_RUN\_PATH@{ENEMY\_SLIME\_RUN\_PATH}!Enemy.h@{Enemy.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY\_SLIME\_RUN\_PATH}{ENEMY\_SLIME\_RUN\_PATH}}
+{\footnotesize\ttfamily \label{_enemy_8h_ac1657502b6d3c8f3996e05451b44b5ae} 
+\#define ENEMY\+\_\+\+SLIME\+\_\+\+RUN\+\_\+\+PATH~"{}assets/characters/slime\+\_\+run\+\_\+spritesheet.\+png"{}}
+
+
+
+Texture path for slime run animation spritesheet. 
+

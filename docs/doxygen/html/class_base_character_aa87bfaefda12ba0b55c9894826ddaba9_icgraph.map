@@ -1,0 +1,9 @@
+<map id="BaseCharacter::tick" name="BaseCharacter::tick">
+<area shape="rect" id="Node000001" title="Per&#45;frame update: advances animation, integrates movement, and draws the sprite." alt="" coords="258,31,395,57"/>
+<area shape="rect" id="Node000002" href="$class_character.html#a8ddce69ed934d5bedcee43f832b1588f" title="Per&#45;frame update for the player character." alt="" coords="103,5,210,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,32,210,29,210,24,245,31"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#af1c9afe97e4d05942f02e5d102bf330a" title="Per&#45;frame update: chase the target and apply damage on collision." alt="" coords="111,56,202,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,56,203,65,202,60,240,57"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Program entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,20,55,21,54,16,89,17"/>
+</map>

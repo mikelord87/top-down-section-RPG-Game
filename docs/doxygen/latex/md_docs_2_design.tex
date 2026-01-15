@@ -1,0 +1,149 @@
+\chapter{Design Notes }
+\hypertarget{md_docs_2_design}{}\label{md_docs_2_design}\index{Design Notes@{Design Notes}}
+\label{md_docs_2_design_autotoc_md103}%
+\Hypertarget{md_docs_2_design_autotoc_md103}%
+
+
+This document captures the game design intent and provides a lightweight reference for future development.
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md105}{}\doxysection{\texorpdfstring{Game Concept}{Game Concept}}\label{md_docs_2_design_autotoc_md105}
+A top-\/down action RPG prototype where the player controls a knight ({\ttfamily \doxylink{class_character}{Character}}) exploring a 2D world. The player encounters enemies ({\ttfamily \doxylink{class_enemy}{Enemy}}) and interacts with world objects ({\ttfamily \doxylink{class_prop}{Prop}}).
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md107}{}\doxysection{\texorpdfstring{Core Pillars}{Core Pillars}}\label{md_docs_2_design_autotoc_md107}
+
+\begin{DoxyItemize}
+\item {\bfseries{Readable movement and combat}}\+: simple controls, clear hit feedback
+\item {\bfseries{Fast iteration}}\+: add small features frequently
+\item {\bfseries{Data-\/driven growth}}\+: move constants and tuning values to one place as the game scales
+\item {\bfseries{Maintainable architecture}}\+: shared behavior in {\ttfamily \doxylink{class_base_character}{Base\+Character}}, specialized behavior in derived classes
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md109}{}\doxysection{\texorpdfstring{Player ({\ttfamily Character})}{Player ({\ttfamily Character})}}\label{md_docs_2_design_autotoc_md109}
+\hypertarget{md_docs_2_design_autotoc_md110}{}\doxysubsection{\texorpdfstring{Goals}{Goals}}\label{md_docs_2_design_autotoc_md110}
+
+\begin{DoxyItemize}
+\item Responsive movement
+\item Clear weapon usage / melee reach
+\item Health-\/based survival loop
+\end{DoxyItemize}\hypertarget{md_docs_2_design_autotoc_md111}{}\doxysubsection{\texorpdfstring{Mechanics (current / intended)}{Mechanics (current / intended)}}\label{md_docs_2_design_autotoc_md111}
+
+\begin{DoxyItemize}
+\item {\bfseries{Movement}}\+: WASD sets velocity each frame
+\item {\bfseries{Weapon}}\+: sword sprite + weapon collision rectangle
+\item {\bfseries{Health}}\+: initialized from {\ttfamily CHARACTER\+\_\+\+PLAYER\+\_\+\+HEALTH}
+\end{DoxyItemize}\hypertarget{md_docs_2_design_autotoc_md112}{}\doxysubsection{\texorpdfstring{Future improvements}{Future improvements}}\label{md_docs_2_design_autotoc_md112}
+
+\begin{DoxyItemize}
+\item Attack input + cooldown window
+\item Attack animation timing (active frames vs recovery)
+\item Knockback + invincibility frames (brief)
+\item Stamina (optional)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md114}{}\doxysection{\texorpdfstring{Enemies ({\ttfamily Enemy})}{Enemies ({\ttfamily Enemy})}}\label{md_docs_2_design_autotoc_md114}
+\hypertarget{md_docs_2_design_autotoc_md115}{}\doxysubsection{\texorpdfstring{Goals}{Goals}}\label{md_docs_2_design_autotoc_md115}
+
+\begin{DoxyItemize}
+\item Minimal but believable behavior
+\item Easy to add new enemy types
+\end{DoxyItemize}\hypertarget{md_docs_2_design_autotoc_md116}{}\doxysubsection{\texorpdfstring{Behavior ideas}{Behavior ideas}}\label{md_docs_2_design_autotoc_md116}
+
+\begin{DoxyItemize}
+\item {\bfseries{Idle / roam}}\+: random or waypoint movement
+\item {\bfseries{Detect / chase}}\+: pursue player within a radius
+\item {\bfseries{Attack}}\+: contact damage or timed melee
+\item {\bfseries{Retreat}} (optional)\+: move away when low HP
+\end{DoxyItemize}\hypertarget{md_docs_2_design_autotoc_md117}{}\doxysubsection{\texorpdfstring{Scaling path}{Scaling path}}\label{md_docs_2_design_autotoc_md117}
+
+\begin{DoxyItemize}
+\item Start with one enemy archetype → expand into\+:
+\begin{DoxyItemize}
+\item fast/low HP
+\item slow/high HP
+\item ranged (projectile)
+\item boss (patterned behavior)
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md119}{}\doxysection{\texorpdfstring{Props ({\ttfamily Prop})}{Props ({\ttfamily Prop})}}\label{md_docs_2_design_autotoc_md119}
+Props can be\+:
+\begin{DoxyItemize}
+\item {\bfseries{Decorations}}\+: trees, rocks, scenery
+\item {\bfseries{Solid obstacles}}\+: block movement / collision
+\item {\bfseries{Interactables}}\+: doors, chests, pickups
+\item {\bfseries{Triggers}}\+: zones that start events or spawn enemies
+\end{DoxyItemize}\hypertarget{md_docs_2_design_autotoc_md120}{}\doxysubsection{\texorpdfstring{Suggested data model}{Suggested data model}}\label{md_docs_2_design_autotoc_md120}
+
+\begin{DoxyItemize}
+\item {\ttfamily Prop\+Type}\+: Decoration / Solid / Interactable / Trigger
+\item Optional {\ttfamily id} or {\ttfamily tag} for scripting / event logic
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md122}{}\doxysection{\texorpdfstring{Combat \& Collision}{Combat \& Collision}}\label{md_docs_2_design_autotoc_md122}
+\hypertarget{md_docs_2_design_autotoc_md123}{}\doxysubsection{\texorpdfstring{Combat loop (intended)}{Combat loop (intended)}}\label{md_docs_2_design_autotoc_md123}
+
+\begin{DoxyEnumerate}
+\item Player attacks → weapon hitbox becomes active
+\item Hitbox intersects enemy collision rectangle → apply damage
+\item \doxylink{class_enemy}{Enemy} reacts (HP-\/, knockback, death)
+\end{DoxyEnumerate}\hypertarget{md_docs_2_design_autotoc_md124}{}\doxysubsection{\texorpdfstring{Collision suggestions}{Collision suggestions}}\label{md_docs_2_design_autotoc_md124}
+
+\begin{DoxyItemize}
+\item Centralize collision checks in a helper module or game-\/world manager
+\item Add debug toggle to draw hitboxes (very helpful)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md126}{}\doxysection{\texorpdfstring{World / Camera}{World / Camera}}\label{md_docs_2_design_autotoc_md126}
+Typical approach\+:
+\begin{DoxyItemize}
+\item Keep player on screen center
+\item Draw enemies/props relative to player world position offset
+\end{DoxyItemize}
+
+Notes\+:
+\begin{DoxyItemize}
+\item Distinguish {\bfseries{world space}} (true positions) vs {\bfseries{screen space}} (draw positions)
+\item Keep conversions consistent (one function or module)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md128}{}\doxysection{\texorpdfstring{UI}{UI}}\label{md_docs_2_design_autotoc_md128}
+Minimal UI milestones\+:
+\begin{DoxyItemize}
+\item HP bar for player
+\item Damage feedback (flash, sound, shake)
+\item Game over screen (HP \texorpdfstring{$<$}{<}= 0)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md130}{}\doxysection{\texorpdfstring{Tuning / Constants}{Tuning / Constants}}\label{md_docs_2_design_autotoc_md130}
+As the project grows, consider moving constants to a single header\+:
+\begin{DoxyItemize}
+\item {\ttfamily Constants.\+h} or {\ttfamily Config.\+h}
+\end{DoxyItemize}
+
+Example\+:
+\begin{DoxyItemize}
+\item movement speed
+\item weapon reach
+\item starting/max HP
+\item enemy detection radius
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_design_autotoc_md132}{}\doxysection{\texorpdfstring{Milestones}{Milestones}}\label{md_docs_2_design_autotoc_md132}
+
+\begin{DoxyItemize}
+\item {\bfseries{M1}}\+: Attack input + enemy damage
+\item {\bfseries{M2}}\+: World collision with props/tiles
+\item {\bfseries{M3}}\+: \doxylink{class_enemy}{Enemy} AI (patrol/chase/attack)
+\item {\bfseries{M4}}\+: UI + game states
+\item {\bfseries{M5}}\+: Content (levels, enemies, items) 
+\end{DoxyItemize}

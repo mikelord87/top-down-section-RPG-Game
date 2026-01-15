@@ -1,0 +1,120 @@
+\chapter{Gameplay Notes }
+\hypertarget{md_docs_2_gameplay}{}\label{md_docs_2_gameplay}\index{Gameplay Notes@{Gameplay Notes}}
+\label{md_docs_2_gameplay_autotoc_md133}%
+\Hypertarget{md_docs_2_gameplay_autotoc_md133}%
+
+
+This page documents current gameplay behavior and intended design direction.
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md135}{}\doxysection{\texorpdfstring{Current Gameplay (Prototype)}{Current Gameplay (Prototype)}}\label{md_docs_2_gameplay_autotoc_md135}
+
+\begin{DoxyItemize}
+\item You control a knight character ({\ttfamily \doxylink{class_character}{Character}})
+\item You can move in a top-\/down world using keyboard input
+\item A sword is equipped and can be drawn / used for melee hit detection
+\item Enemies ({\ttfamily \doxylink{class_enemy}{Enemy}}) exist as hostile entities
+\item Props ({\ttfamily \doxylink{class_prop}{Prop}}) exist as world objects
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md137}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md_docs_2_gameplay_autotoc_md137}
+
+\begin{DoxyItemize}
+\item {\bfseries{W / A / S / D}} — Move
+\end{DoxyItemize}
+
+\begin{quote}
+If/when you add attacks or interactions, list them here\+:
+\begin{DoxyItemize}
+\item {\bfseries{Space / Mouse Left}} — Attack (example)
+\item {\bfseries{E}} — Interact (example) 
+\end{DoxyItemize}\end{quote}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md139}{}\doxysection{\texorpdfstring{Combat}{Combat}}\label{md_docs_2_gameplay_autotoc_md139}
+\hypertarget{md_docs_2_gameplay_autotoc_md140}{}\doxysubsection{\texorpdfstring{Weapon / Hit Detection}{Weapon / Hit Detection}}\label{md_docs_2_gameplay_autotoc_md140}
+The player character exposes a weapon collision rectangle\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Rectangle \doxylink{class_character_ad40af89fe4bfc76e04d7919debdfeb88}{Character\+::get\+Weapon\+Collision\+Rec()}}
+\end{DoxyItemize}
+
+Typical usage\+:
+\begin{DoxyItemize}
+\item When the player attacks (or while attacking), test this rectangle against enemy collision rectangles
+\item If collision occurs, apply damage to the enemy
+\end{DoxyItemize}\hypertarget{md_docs_2_gameplay_autotoc_md141}{}\doxysubsection{\texorpdfstring{Health}{Health}}\label{md_docs_2_gameplay_autotoc_md141}
+The player starts with\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily CHARACTER\+\_\+\+PLAYER\+\_\+\+HEALTH} in {\ttfamily \doxylink{_character_8h}{Character.\+h}}
+\end{DoxyItemize}
+
+The player loses health via\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_character_afc49015f7f6939e39f1718686e191e3e}{Character\+::take\+Damage(float damage)}}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md143}{}\doxysection{\texorpdfstring{Enemies}{Enemies}}\label{md_docs_2_gameplay_autotoc_md143}
+Enemies should typically have\+:
+
+
+\begin{DoxyItemize}
+\item Movement/behavior updates per frame ({\ttfamily tick})
+\item A way to take damage (health decreases)
+\item A state that determines whether they’re active/alive
+\end{DoxyItemize}
+
+Possible next behaviors\+:
+\begin{DoxyItemize}
+\item Patrol in an area
+\item Chase player within a detection radius
+\item Stop/idle when far away
+\item Attack player when close
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md145}{}\doxysection{\texorpdfstring{Props}{Props}}\label{md_docs_2_gameplay_autotoc_md145}
+Props can be used for\+:
+
+
+\begin{DoxyItemize}
+\item Decoration
+\item Obstacles (collision)
+\item Interactables (chests, doors)
+\item Triggers (zone-\/based events)
+\end{DoxyItemize}
+
+Suggested additions\+:
+\begin{DoxyItemize}
+\item {\ttfamily Prop\+Type} enum (Decoration, Solid, Interactable)
+\item Optional interaction callback or ID
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md147}{}\doxysection{\texorpdfstring{UI Ideas}{UI Ideas}}\label{md_docs_2_gameplay_autotoc_md147}
+
+\begin{DoxyItemize}
+\item Player health bar
+\item Damage flash / knockback feedback
+\item \doxylink{class_enemy}{Enemy} health (optional)
+\item Debug overlay (FPS, coordinates, hitboxes)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_docs_2_gameplay_autotoc_md149}{}\doxysection{\texorpdfstring{Milestone Ideas}{Milestone Ideas}}\label{md_docs_2_gameplay_autotoc_md149}
+
+\begin{DoxyItemize}
+\item {\bfseries{M1\+:}} player attack input + enemy damage
+\item {\bfseries{M2\+:}} collisions with world and props
+\item {\bfseries{M3\+:}} enemy AI (patrol/chase/attack)
+\item {\bfseries{M4\+:}} UI and game state (menu, game over)
+\item {\bfseries{M5\+:}} content (more levels, enemies, items) 
+\end{DoxyItemize}

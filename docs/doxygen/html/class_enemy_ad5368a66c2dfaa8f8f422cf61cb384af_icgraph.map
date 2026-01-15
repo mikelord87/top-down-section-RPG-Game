@@ -1,0 +1,5 @@
+<map id="Enemy::getScreenPos" name="Enemy::getScreenPos">
+<area shape="rect" id="Node000001" title="Convert enemy world position to screen position relative to target." alt="" coords="145,5,297,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#af1c9afe97e4d05942f02e5d102bf330a" title="Per&#45;frame update: chase the target and apply damage on collision." alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,19,97,21,97,16,132,18"/>
+</map>

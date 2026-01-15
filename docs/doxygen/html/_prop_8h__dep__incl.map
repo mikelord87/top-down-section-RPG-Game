@@ -1,0 +1,7 @@
+<map id="include/Prop.h" name="include/Prop.h">
+<area shape="rect" id="Node000001" title="Declares a static world prop (e.g., rocks/logs) with basic collision." alt="" coords="61,5,165,32"/>
+<area shape="rect" id="Node000002" href="$_prop_8cpp.html" title="Implements Prop rendering and collision helpers." alt="" coords="5,80,101,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,43,65,81,61,78,90,45"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the top&#45;down RPG demo." alt="" coords="125,80,221,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,42,165,80,160,79,132,46"/>
+</map>

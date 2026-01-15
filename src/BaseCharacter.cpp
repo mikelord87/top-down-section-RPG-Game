@@ -1,3 +1,11 @@
+/**
+ * @file BaseCharacter.cpp
+ * @brief Implements BaseCharacter behavior such as animation, movement, and drawing.
+ * 
+ * @author Miguel Rios
+ * @date 01/14/2026
+ */
+
 #include "BaseCharacter.h"
 #include "raymath.h"
 
@@ -5,11 +13,22 @@ BaseCharacter::BaseCharacter(/* args */)
 {
 }
 
+/**
+ * @brief Restore world position to the last frame (used to undo invalid movement).
+ */
 void BaseCharacter::undoMovement(void)
 {
     worldPos = worldPosLastFrame;
 }
 
+/**
+ * @brief Build an AABB collision rectangle in screen space.
+ *
+ * Uses the current screen position returned by getScreenPos() and the scaled
+ * animation frame size.
+ *
+ * @return Screen-space collision rectangle.
+ */
 Rectangle BaseCharacter::getCollisionRec(void)
 {
     return Rectangle{
@@ -20,6 +39,16 @@ Rectangle BaseCharacter::getCollisionRec(void)
     };
 }
 
+/**
+ * @brief Update animation, integrate movement, and draw.
+ *
+ * - Advances animation frame based on deltaTime and updateTime.
+ * - Integrates velocity into worldPos (normalized) with the configured speed.
+ * - Selects idle or run texture depending on motion.
+ * - Resets velocity to zero after applying movement (caller should set velocity every frame).
+ *
+ * @param deltaTime Frame delta time in seconds.
+ */
 void BaseCharacter::tick(float deltaTime)
 {
     worldPosLastFrame = worldPos;

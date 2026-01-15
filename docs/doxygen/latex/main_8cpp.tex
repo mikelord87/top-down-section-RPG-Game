@@ -1,0 +1,174 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Entry point for the top-\/down RPG demo.  
+
+
+{\ttfamily \#include "{}raylib.\+h"{}}\newline
+{\ttfamily \#include "{}raymath.\+h"{}}\newline
+{\ttfamily \#include "{}Character.\+h"{}}\newline
+{\ttfamily \#include "{}Prop.\+h"{}}\newline
+{\ttfamily \#include "{}Enemy.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ab2e96ec9f8cea8a0d5f95888e18c1201}{WINDOW\+\_\+\+DIM\+\_\+\+SIZE}}~2
+\begin{DoxyCompactList}\small\item\em Number of window dimension entries (width, height). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a501aadf6b641279fbe7c9ab63a4de0fc}{WINDOW\+\_\+\+DIM\+\_\+\+WIDTH}}~384
+\begin{DoxyCompactList}\small\item\em Window width in pixels. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a9765316361741b2497b63edd64ecbbfa}{WINDOW\+\_\+\+DIM\+\_\+\+HEIGHT}}~384
+\begin{DoxyCompactList}\small\item\em Window height in pixels. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a63a780eb9590cbea188494a74c8eb79e}{GAME\+\_\+\+FPS}}~60
+\begin{DoxyCompactList}\small\item\em Target frame rate. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a3adf7b7b13572f2baf3379a8f2f4220a}{WINDOW\+\_\+\+TITLE}}~"{}RPG Game"{}
+\begin{DoxyCompactList}\small\item\em Window title. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a5c548c8eda3c4348052f0cd0312734af}{GAME\+\_\+\+WORLD\+\_\+\+MAP\+\_\+\+PATH}}~"{}assets/nature\+\_\+tileset/World\+Map.\+png"{}
+\begin{DoxyCompactList}\small\item\em World map texture path. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a95216ef5f97c8711f5aa1953d96f76b4}{GAME\+\_\+\+PROPS\+\_\+\+ROCK\+\_\+\+PATH}}~"{}assets/nature\+\_\+tileset/Rock.\+png"{}
+\begin{DoxyCompactList}\small\item\em Rock prop texture path. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a63e24d8a47852ecf7fd08bc29b5ed862}{GAME\+\_\+\+PROPS\+\_\+\+LOG\+\_\+\+PATH}}~"{}assets/nature\+\_\+tileset/Log.\+png"{}
+\begin{DoxyCompactList}\small\item\em Log prop texture path. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_a3cb19f1944d7c62c70138811e5c902ed}{GAME\+\_\+\+WORLD\+\_\+\+MAP\+\_\+\+SCALE}}~4.\+0f
+\begin{DoxyCompactList}\small\item\em World map draw scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Program entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the top-\/down RPG demo. 
+
+Sets up the raylib window, loads assets, creates game objects, and runs the main loop.
+
+\begin{DoxyAuthor}{Author}
+Miguel Rios 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/14/2026 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\Hypertarget{main_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_a63a780eb9590cbea188494a74c8eb79e}\index{main.cpp@{main.cpp}!GAME\_FPS@{GAME\_FPS}}
+\index{GAME\_FPS@{GAME\_FPS}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GAME\_FPS}{GAME\_FPS}}
+{\footnotesize\ttfamily \label{main_8cpp_a63a780eb9590cbea188494a74c8eb79e} 
+\#define GAME\+\_\+\+FPS~60}
+
+
+
+Target frame rate. 
+
+\Hypertarget{main_8cpp_a63e24d8a47852ecf7fd08bc29b5ed862}\index{main.cpp@{main.cpp}!GAME\_PROPS\_LOG\_PATH@{GAME\_PROPS\_LOG\_PATH}}
+\index{GAME\_PROPS\_LOG\_PATH@{GAME\_PROPS\_LOG\_PATH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GAME\_PROPS\_LOG\_PATH}{GAME\_PROPS\_LOG\_PATH}}
+{\footnotesize\ttfamily \label{main_8cpp_a63e24d8a47852ecf7fd08bc29b5ed862} 
+\#define GAME\+\_\+\+PROPS\+\_\+\+LOG\+\_\+\+PATH~"{}assets/nature\+\_\+tileset/Log.\+png"{}}
+
+
+
+Log prop texture path. 
+
+\Hypertarget{main_8cpp_a95216ef5f97c8711f5aa1953d96f76b4}\index{main.cpp@{main.cpp}!GAME\_PROPS\_ROCK\_PATH@{GAME\_PROPS\_ROCK\_PATH}}
+\index{GAME\_PROPS\_ROCK\_PATH@{GAME\_PROPS\_ROCK\_PATH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GAME\_PROPS\_ROCK\_PATH}{GAME\_PROPS\_ROCK\_PATH}}
+{\footnotesize\ttfamily \label{main_8cpp_a95216ef5f97c8711f5aa1953d96f76b4} 
+\#define GAME\+\_\+\+PROPS\+\_\+\+ROCK\+\_\+\+PATH~"{}assets/nature\+\_\+tileset/Rock.\+png"{}}
+
+
+
+Rock prop texture path. 
+
+\Hypertarget{main_8cpp_a5c548c8eda3c4348052f0cd0312734af}\index{main.cpp@{main.cpp}!GAME\_WORLD\_MAP\_PATH@{GAME\_WORLD\_MAP\_PATH}}
+\index{GAME\_WORLD\_MAP\_PATH@{GAME\_WORLD\_MAP\_PATH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GAME\_WORLD\_MAP\_PATH}{GAME\_WORLD\_MAP\_PATH}}
+{\footnotesize\ttfamily \label{main_8cpp_a5c548c8eda3c4348052f0cd0312734af} 
+\#define GAME\+\_\+\+WORLD\+\_\+\+MAP\+\_\+\+PATH~"{}assets/nature\+\_\+tileset/World\+Map.\+png"{}}
+
+
+
+World map texture path. 
+
+\Hypertarget{main_8cpp_a3cb19f1944d7c62c70138811e5c902ed}\index{main.cpp@{main.cpp}!GAME\_WORLD\_MAP\_SCALE@{GAME\_WORLD\_MAP\_SCALE}}
+\index{GAME\_WORLD\_MAP\_SCALE@{GAME\_WORLD\_MAP\_SCALE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GAME\_WORLD\_MAP\_SCALE}{GAME\_WORLD\_MAP\_SCALE}}
+{\footnotesize\ttfamily \label{main_8cpp_a3cb19f1944d7c62c70138811e5c902ed} 
+\#define GAME\+\_\+\+WORLD\+\_\+\+MAP\+\_\+\+SCALE~4.\+0f}
+
+
+
+World map draw scale. 
+
+\Hypertarget{main_8cpp_a9765316361741b2497b63edd64ecbbfa}\index{main.cpp@{main.cpp}!WINDOW\_DIM\_HEIGHT@{WINDOW\_DIM\_HEIGHT}}
+\index{WINDOW\_DIM\_HEIGHT@{WINDOW\_DIM\_HEIGHT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_DIM\_HEIGHT}{WINDOW\_DIM\_HEIGHT}}
+{\footnotesize\ttfamily \label{main_8cpp_a9765316361741b2497b63edd64ecbbfa} 
+\#define WINDOW\+\_\+\+DIM\+\_\+\+HEIGHT~384}
+
+
+
+Window height in pixels. 
+
+\Hypertarget{main_8cpp_ab2e96ec9f8cea8a0d5f95888e18c1201}\index{main.cpp@{main.cpp}!WINDOW\_DIM\_SIZE@{WINDOW\_DIM\_SIZE}}
+\index{WINDOW\_DIM\_SIZE@{WINDOW\_DIM\_SIZE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_DIM\_SIZE}{WINDOW\_DIM\_SIZE}}
+{\footnotesize\ttfamily \label{main_8cpp_ab2e96ec9f8cea8a0d5f95888e18c1201} 
+\#define WINDOW\+\_\+\+DIM\+\_\+\+SIZE~2}
+
+
+
+Number of window dimension entries (width, height). 
+
+\Hypertarget{main_8cpp_a501aadf6b641279fbe7c9ab63a4de0fc}\index{main.cpp@{main.cpp}!WINDOW\_DIM\_WIDTH@{WINDOW\_DIM\_WIDTH}}
+\index{WINDOW\_DIM\_WIDTH@{WINDOW\_DIM\_WIDTH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_DIM\_WIDTH}{WINDOW\_DIM\_WIDTH}}
+{\footnotesize\ttfamily \label{main_8cpp_a501aadf6b641279fbe7c9ab63a4de0fc} 
+\#define WINDOW\+\_\+\+DIM\+\_\+\+WIDTH~384}
+
+
+
+Window width in pixels. 
+
+\Hypertarget{main_8cpp_a3adf7b7b13572f2baf3379a8f2f4220a}\index{main.cpp@{main.cpp}!WINDOW\_TITLE@{WINDOW\_TITLE}}
+\index{WINDOW\_TITLE@{WINDOW\_TITLE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_TITLE}{WINDOW\_TITLE}}
+{\footnotesize\ttfamily \label{main_8cpp_a3adf7b7b13572f2baf3379a8f2f4220a} 
+\#define WINDOW\+\_\+\+TITLE~"{}RPG Game"{}}
+
+
+
+Window title. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Program entry point. 
+
+Creates the window and game entities (player, props, enemies), then runs an update/render loop until the window is closed.
+
+\begin{DoxyReturn}{Returns}
+Exit code (0 on normal completion). 
+\end{DoxyReturn}
